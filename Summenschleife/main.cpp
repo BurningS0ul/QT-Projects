@@ -9,7 +9,7 @@ int main()
 
     while (repeat < 10){
         cin >> num;
-        repeat += 1;
+        repeat++;
         sum = num + sum;
 
         if (num == 0){
