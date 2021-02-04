@@ -4,8 +4,8 @@
 
 using namespace std;
 
-int main()
-{
+int main() {
+
     Warrior W;
     Archer A;
     Mage M;
@@ -68,7 +68,6 @@ int main()
                 A.currentHealth -= W.Damage;
                 M.currentHealth -= W.Damage;
                 R.currentHealth -= W.Damage;
-                turn = 'A';
 
                 if (A.currentHealth < 0 && numA != 0) {
                     numA--;
@@ -85,9 +84,7 @@ int main()
                 }
             }
         }
-        else {
-            turn = 'A';
-        }
+        turn = 'A';
 
         if (turn == 'A' && numA > 0) {
 
@@ -95,7 +92,6 @@ int main()
                 W.currentHealth -= A.Damage;
                 M.currentHealth -= A.Damage;
                 R.currentHealth -= A.Damage;
-                turn = 'M';
 
                 if ( W.currentHealth < 0 && numW != 0) {
                     numW--;
@@ -111,9 +107,7 @@ int main()
                 }
             }
         }
-        else {
-            turn = 'M';
-        }
+        turn = 'M';
 
         if (turn == 'M' && numM > 0) {
 
@@ -121,7 +115,6 @@ int main()
                 W.currentHealth -= M.Damage;
                 A.currentHealth -= M.Damage;
                 R.currentHealth -= M.Damage;
-                turn = 'R';
 
                 if ( W.currentHealth < 0 && numW != 0) {
                     numW--;
@@ -137,9 +130,7 @@ int main()
                 }
             }
         }
-        else {
-            turn = 'R';
-        }
+        turn = 'R';
 
         if (turn == 'R' && numR > 0) {
 
@@ -147,7 +138,6 @@ int main()
                 W.currentHealth -= R.Damage;
                 A.currentHealth -= R.Damage;
                 M.currentHealth -= R.Damage;
-                turn = 'W';
 
                 if (W.currentHealth < 0 && numW != 0) {
                     numW--;
@@ -163,9 +153,8 @@ int main()
                 }
             }
         }
-        else {
-            turn = 'W';
-        }
+        turn = 'W';
+
 
         if (numW > 0 && numA <= 0 && numM <= 0 && numR <= 0) {
             cout << "The Warriors are victorious!\n";
@@ -179,7 +168,7 @@ int main()
         }
         if (numM > 0 && numA <= 0 && numW <= 0 && numR <= 0) {
             cout << "Nobody could keep up with the Mages!\n";
-            cout << "Mages left: " << numW << endl;
+            cout << "Mages left: " << numM << endl;
             break;
         }
         if (numR > 0 && numA <= 0 && numM <= 0 && numW <= 0) {
