@@ -155,7 +155,6 @@ int main() {
         }
         turn = 'W';
 
-
         if (numW > 0 && numA <= 0 && numM <= 0 && numR <= 0) {
             cout << "The Warriors are victorious!\n";
             cout << "Warriors left: " << numW << endl;
